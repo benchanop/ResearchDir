@@ -7,7 +7,9 @@ import ResearchCard from '../components/ResearchCard'
 import { Input } from 'antd';
 
 const { Search } = Input;
-
+const BgColor = styled.div`
+  background: #f5f5f5;
+`
 const CustomMenu = styled(Menu)`
   background: black;
   color: white;
@@ -20,6 +22,7 @@ const Body = styled.div`
   align-items: center;
   flex-direction: column;
   background: #2f3b7a;
+
 `
 const CustomSearch = styled(Search)`
   max-width: 800px;
@@ -37,7 +40,7 @@ const SearchResults = [
     avatar: "",
     name_th: "นายคน แรก",
     name_en: "People 1",
-    keyword: [{
+    keywords: [{
       th: "dog",
       en: "หมา"
     }, {
@@ -49,8 +52,8 @@ const SearchResults = [
   {
     avatar: "",
     name_th: "นายคน สอง",
-    name: "People 2",
-     keyword: [{
+    name_en: "People 2",
+    keywords: [{
       th: "dog",
       en: "หมา"
     }, {
@@ -62,8 +65,8 @@ const SearchResults = [
   {
     avatar: "",
     name_th: "นายคน สาม",
-    name: "People 3",
-     keyword: [{
+    name_en: "People 3",
+    keywords: [{
       th: "dog",
       en: "หมา"
     }, {
@@ -75,8 +78,8 @@ const SearchResults = [
   {
     avatar: "",
     name_th: "นายคน สี่",
-    name: "People 4",
-     keyword: [{
+    name_en: "People 4",
+    keywords: [{
       th: "dog",
       en: "หมา"
     }, {
@@ -86,7 +89,7 @@ const SearchResults = [
     target: ["dog", "cat", "rabbit"]
   },
 ]
-const Home = () => <div>
+const Home = () => <BgColor>
   <div>
     <CustomMenu mode="horizontal">
       <Menu.Item key="All">
@@ -119,8 +122,8 @@ const Home = () => <div>
   </Body>
 
   <ContainerWhiteCard>
-    <ResearchCard SearchResults={SearchResults}/>
+    <ResearchCard searchResults={SearchResults}/>
   </ContainerWhiteCard>
-</div>
+</BgColor>
 
 export default Home
