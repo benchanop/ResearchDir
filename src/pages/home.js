@@ -89,6 +89,13 @@ const SearchResults = [
     target: ["dog", "cat", "rabbit"]
   },
 ]
+
+const ExampleText = styled.div`
+  color: #fff;
+  margin-top : 10px;
+
+`
+
 const Home = () => <BgColor>
   <div>
     <CustomMenu mode="horizontal">
@@ -111,6 +118,7 @@ const Home = () => <BgColor>
   </div>
 
   <Body>
+    <br/><br/>
     <img src={logo} alt="logo"/>
 
     <CustomSearch
@@ -119,6 +127,8 @@ const Home = () => <BgColor>
       size="large"
       onSearch={value => console.log(value)}
     />
+    
+    <ExampleText>Example : </ExampleText>
   </Body>
 
   <ContainerWhiteCard>
